@@ -14,7 +14,7 @@ import java.util.Arrays;
  */
 public class SortTesting {
 
-    private static final int ARRAY_SIZE = 2000000;
+    private static final int ARRAY_SIZE = 50000;
 
     /**
      * Main method which contains program.
@@ -34,17 +34,17 @@ public class SortTesting {
 
 
         // Use bubble sort
-//        long startTime = System.currentTimeMillis();
-//        BubbleSort bubbleSortedArray = new BubbleSort(numbers1);
-//        long endTime = System.currentTimeMillis();
-//
-//        // Display results
-//        System.out.println("BubbleSort: " + ARRAY_SIZE + " Elements - " + (endTime - startTime) + "ms");
+        long startTime = System.currentTimeMillis();
+        BubbleSort bubbleSortedArray = new BubbleSort(numbers1);
+        long endTime = System.currentTimeMillis();
+
+        // Display results
+        System.out.println("BubbleSort: " + ARRAY_SIZE + " Elements - " + (endTime - startTime) + "ms");
 
         // Use Improved Bubble Sort
-        long startTime = System.currentTimeMillis();
+        startTime = System.currentTimeMillis();
         ImprovedBubbleSort improvedSortedArray = new ImprovedBubbleSort(numbers2);
-        long endTime = System.currentTimeMillis();
+        endTime = System.currentTimeMillis();
 
         // Display results
         System.out.println("ImprovedBubbleSort: " + ARRAY_SIZE + " Elements - " + (endTime - startTime) + "ms");
