@@ -10,7 +10,7 @@ import java.util.Arrays;
  * Runtime of O(n^2) (inefficient)
  *
  * @author Patrick Lindsay
- * @version 1.0
+ * @version 1.1
  */
 public class BubbleSort {
     private int[] elements;
@@ -27,14 +27,16 @@ public class BubbleSort {
     // Method to sort the stored array of elements
     private void sort() {
         boolean unsorted;
+        int passCount = 0;
         do {
             unsorted = false;
-            for (int i = 0; i < elements.length - 1; i++) {
+            for (int i = 0; i < elements.length - 1 - passCount; i++) {
                 if (elements[i] > elements[i + 1]) {
                     swap(i, i + 1);
                     unsorted = true;
                 }
             }
+            passCount++;
         }
         while(unsorted);
     }
